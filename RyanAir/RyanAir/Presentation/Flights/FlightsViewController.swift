@@ -78,9 +78,9 @@ extension FlightsViewController: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         
-        let flight = flightPresenter?.flights?.trips?.first?.dates?[indexPath.section].flights[indexPath.row]
+        let singleFlight = flightPresenter?.flights?.trips?.first?.dates?[indexPath.section].flights[indexPath.row]
         
-        cell.bind(flight: flight)
+        cell.bind(origin: flightPresenter?.flights?.trips?.first?.origin, destination: flightPresenter?.flights?.trips?.first?.destination, singleFlight: singleFlight)
         
         return cell
     }

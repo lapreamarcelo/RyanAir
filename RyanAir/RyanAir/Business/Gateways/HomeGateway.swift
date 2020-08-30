@@ -19,7 +19,7 @@ protocol HomeGatewayProtocol {
 class HomeGateway: HomeGatewayProtocol {
     
     func getFlights(origin: String, destination: String, dateOut: String, adults: String, teens: String, children: String, completion: @escaping FlightsResponseCompletion) {
-        var urlComponent = URLComponents(string: "https://sit-nativeapps.ryanair.com/api/v4/Availability")
+        var urlComponent = URLComponents(string: "https://tripstest.ryanair.com/api/v4/Availability")
         
         let queryItems = [URLQueryItem(name: "origin", value: origin),
                           URLQueryItem(name: "destination", value: destination),
